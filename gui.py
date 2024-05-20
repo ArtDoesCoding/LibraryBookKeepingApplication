@@ -2,7 +2,6 @@ import PySimpleGUI as sg
 from database import add_book, query_books_by_author, query_books_by_title, get_all_books, \
     remove_book
 
-
 sg.LOOK_AND_FEEL_TABLE['CustomTheme'] = {
     'BACKGROUND': '#2B2B2B',
     'TEXT': '#E5E5E5',
@@ -45,7 +44,8 @@ def create_window():
         [sg.Button('Exit', size=(15, 1))]
     ]
 
-    return sg.Window('Library Bookkeeping', layout, finalize=True, resizable=True)
+    return sg.Window('Library Bookkeeping', layout, finalize=True, resizable=True, icon='Media'
+                                                                                        '/icon.ico')
 
 
 def format_book(book):
